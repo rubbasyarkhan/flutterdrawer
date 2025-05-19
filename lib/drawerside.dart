@@ -1,3 +1,4 @@
+import 'package:fltterprojectmon/dynamiclist.dart';
 import 'package:fltterprojectmon/firstscreen.dart';
 import 'package:fltterprojectmon/secondscreen.dart';
 import 'package:flutter/material.dart';
@@ -72,6 +73,19 @@ class _DrawerSideState extends State<DrawerSide> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Secondscreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.add_shopping_cart, color: Colors.blue),
+            title: Text(
+              'Dynamic list',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Dynamiclist()),
               );
             },
           ),
